@@ -131,3 +131,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 # Celery settings (broker URL example with Redis)
 CELERY_BROKER_URL = "redis://localhost:6379/0"
+
+# Email configuration (NOTE: replace with your configuration)
+EMAIL_HOST = "sandbox.smtp.mailtrap.io"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_PORT = "2525"
