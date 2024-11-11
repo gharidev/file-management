@@ -14,6 +14,9 @@ body {
     padding: 10px;
     width: 200px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .photo img {
