@@ -1,4 +1,4 @@
-# Django Fundamentals for Production
+# Introduction to File Management & Celery
 
 ## 1. Introduction to Static Files in Django
 
