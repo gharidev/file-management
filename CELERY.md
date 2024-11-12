@@ -3,7 +3,7 @@
 ## Command
 ```
 .\Redis-x64-5.0.14.1\redis-server.exe
-celery -A file_management worker -l info
+celery -A file_management worker -l info --pool=solo
 ```
 
 ## Why use Celery?
