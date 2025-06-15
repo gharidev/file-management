@@ -1,18 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'gallery/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Upload Photo</title>
-</head>
+{% block title %}Upload Photo - File Management{% endblock %}
 
-<body>
-    <h1>Upload a New Photo</h1>
+{% block content %}
+<h1><i class="fas fa-upload"></i> Upload a New Photo</h1>
+
+<div class="form-container">
+    <div class="upload-area">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <h3>Select a photo to upload</h3>
+        <p>Choose an image file from your device</p>
+    </div>
+
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
-</body>
 
-</html>
+        <div class="form-group">
+            <label for="{{ form.title.id_for_label }}">
+                <i class="fas fa-tag"></i> Photo Title
+            </label>
+            {{ form.title }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.image.id_for_label }}">
+                <i class="fas fa-image"></i> Choose Image
+            </label>
+            {{ form.image }}
+        </div>
+
+        {% if form.description %}
+        <div class="form-group">
+            <label for="{{ form.description.id_for_label }}">
+                <i class="fas fa-align-left"></i> Description (Optional)
+            </label>
+            {{ form.description }}
+        </div>
+        {% endif %}
+
+        <button type="submit" class="btn btn-center">
+            <i class="fas fa-upload"></i>
+            Upload Photo
+        </button>
+    </form>
+</div>
+{% endblock %}

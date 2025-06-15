@@ -21,6 +21,7 @@ Static files are assets that **do not change** during the application's runtime 
 
 ### In Our Project:
 - `static/css/style.css` - Application styling
+- `static/js/main.js` - Interactive functionality
 
 ---
 

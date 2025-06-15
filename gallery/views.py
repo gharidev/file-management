@@ -5,7 +5,7 @@ from .tasks import send_welcome_email_async, send_welcome_mail_realtime
 
 
 def gallery_view(request):
-    photos = Photo.objects.all()
+    photos = Photo.objects.order_by("-id")
     return render(request, "gallery/gallery.html", {"photos": photos})
 
 
