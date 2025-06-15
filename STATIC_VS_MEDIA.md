@@ -21,8 +21,6 @@ Static files are assets that **do not change** during the application's runtime 
 
 ### In Our Project:
 - `static/css/style.css` - Application styling
-- `static/js/main.js` - JavaScript functionality
-- `static/images/folder-icon.svg` - Navbar folder icon
 
 ---
 
@@ -46,7 +44,7 @@ Media files are **user-uploaded content** that can change during the application
 
 ### In Our Project:
 - Documents uploaded via the upload form
-- Stored in `media/documents/` directory
+- Stored in `media/photos/` directory
 - Accessible via download links
 
 ---
