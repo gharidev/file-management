@@ -4,8 +4,23 @@
 
 **PythonAnywhere** is a cloud-based Python hosting service that makes it easy to deploy web applications without managing servers.
 
-### Why Choose PythonAnywhere?
-- **Beginner-friendly** - No server management needed
+### Why Choose PythonAnywhere?### **Updating Your App**:
+```bash
+# In PythonAnywhere console
+cd your-project-name
+git pull origin main
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py collectstatic --noinput
+
+# Then reload web app in Web tab
+```
+
+---
+
+## Useful PythonAnywhere Commands
+
+### **File Management**:endly** - No server management needed
 - **Free tier available** - Great for learning and small projects
 - **Python-focused** - Optimized for Python web apps
 - **Quick deployment** - Get online in minutes
@@ -124,17 +139,17 @@ python manage.py collectstatic --noinput
 
 ### Step 8: Create Web App
 
-1. 🌐 Go to **Web tab** in PythonAnywhere dashboard
-2. ➕ Click **"Add a new web app"**
-3. 🔧 Choose **"Manual configuration"**
-4. 🐍 Select **Python 3.10**
-5. ✅ Click **"Next"**
+1. Go to **Web tab** in PythonAnywhere dashboard
+2. Click **"Add a new web app"**
+3. Choose **"Manual configuration"**
+4. Select **Python 3.10**
+5. Click **"Next"**
 
 ### Step 9: Configure WSGI File
 
-1. 📁 In **Web tab**, click on **WSGI configuration file** link
-2. 🗑️ **Delete all existing content**
-3. 📝 **Replace with**:
+1. In **Web tab**, click on **WSGI configuration file** link
+2. **Delete all existing content**
+3. **Replace with**:
 
 ```python
 import os
@@ -155,14 +170,14 @@ application = get_wsgi_application()
 
 ### Step 10: Configure Virtual Environment
 
-1. 🌐 In **Web tab**, find **"Virtualenv"** section
-2. 📂 Enter path: `/home/yourusername/your-project-name/venv`
-3. ✅ Click **checkmark** to save
+1. In **Web tab**, find **"Virtualenv"** section
+2. Enter path: `/home/yourusername/your-project-name/venv`
+3. Click **checkmark** to save
 
 ### Step 11: Configure Static Files
 
-1. 🌐 In **Web tab**, find **"Static files"** section
-2. ➕ Click **"Enter URL"** and **"Enter path"**:
+1. In **Web tab**, find **"Static files"** section
+2. Click **"Enter URL"** and **"Enter path"**:
 
 | URL | Directory |
 |-----|-----------|
@@ -171,14 +186,14 @@ application = get_wsgi_application()
 
 ### Step 12: Reload Web App
 
-1. 🔄 Go to top of **Web tab**
-2. 🟢 Click big green **"Reload yourusername.pythonanywhere.com"** button
-3. ⏱️ Wait for reload to complete
+1. Go to top of **Web tab**
+2. Click big green **"Reload yourusername.pythonanywhere.com"** button
+3. Wait for reload to complete
 
 ### Step 13: Test Your Application
 
-1. 🌐 Click **"yourusername.pythonanywhere.com"** link
-2. 🎉 Your Django app should be live!
+1. Click **"yourusername.pythonanywhere.com"** link
+2. Your Django app should be live!
 
 ---
 
@@ -198,14 +213,14 @@ DATABASES = {
 
 ## Common Issues & Solutions
 
-### 🚨 **Problem**: Import Error
+### **Problem**: Import Error
 **Solution**: Check Python path in WSGI file
 ```python
 # Make sure this matches your actual project structure
 path = '/home/yourusername/your-project-name'
 ```
 
-### 🚨 **Problem**: Static Files Not Loading
+### **Problem**: Static Files Not Loading
 **Solution**: 
 1. Run `python manage.py collectstatic`
 2. Check static files mapping in Web tab
@@ -214,7 +229,7 @@ path = '/home/yourusername/your-project-name'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ```
 
-### 🚨 **Problem**: Database Errors
+### **Problem**: Database Errors
 **Solution**:
 ```bash
 # Run migrations
@@ -224,7 +239,7 @@ python manage.py migrate
 python manage.py check --deploy
 ```
 
-### 🚨 **Problem**: "DisallowedHost" Error
+### **Problem**: "DisallowedHost" Error
 **Solution**: Add your domain to `ALLOWED_HOSTS`:
 ```python
 ALLOWED_HOSTS = ['yourusername.pythonanywhere.com']
@@ -234,7 +249,7 @@ ALLOWED_HOSTS = ['yourusername.pythonanywhere.com']
 
 ## Production Best Practices
 
-### 🔒 **Security Settings**:
+### **Security Settings**:
 ```python
 # settings.py
 DEBUG = False
@@ -260,7 +275,7 @@ python manage.py collectstatic --noinput
 
 ## Useful PythonAnywhere Commands
 
-### 📂 **File Management**:
+### **File Management**:
 ```bash
 # List files
 ls -la
@@ -272,7 +287,7 @@ nano filename.py
 du -sh *
 ```
 
-### 🐍 **Python Environment**:
+### **Python Environment**:
 ```bash
 # Activate virtual environment
 source venv/bin/activate
@@ -284,7 +299,7 @@ pip list
 pip install package_name
 ```
 
-### 🗄️ **Database Commands**:
+### **Database Commands**:
 ```bash
 # Django shell
 python manage.py shell
@@ -300,31 +315,31 @@ python manage.py migrate
 
 ## Free Account Limitations
 
-### 🆓 **Free Tier Includes**:
-- ✅ 1 web app
-- ✅ 512MB disk space
-- ✅ 100 seconds CPU time/day
-- ✅ SQLite database support
+### **Free Tier Includes**:
+- 1 web app
+- 512MB disk space
+- 100 seconds CPU time/day
+- SQLite database support
 
-### ⬆️ **Upgrade Benefits**:
-- 🚀 More CPU time
-- 💾 More disk space
-- 🌐 Custom domains
-- 📊 Always-on tasks
-- 🎯 More web apps
+### **Upgrade Benefits**:
+- More CPU time
+- More disk space
+- Custom domains
+- Always-on tasks
+- More web apps
 
 ---
 
 ## Quick Checklist
 
-### ✅ **Before Deployment**:
+### **Before Deployment**:
 - [ ] Django project works locally
 - [ ] `requirements.txt` created
 - [ ] `ALLOWED_HOSTS` updated
 - [ ] Static files configured
 - [ ] Code pushed to Git
 
-### ✅ **During Deployment**:
+### **During Deployment**:
 - [ ] PythonAnywhere account created
 - [ ] Project cloned
 - [ ] Virtual environment created
@@ -333,7 +348,7 @@ python manage.py migrate
 - [ ] Static files mapped
 - [ ] Web app reloaded
 
-### ✅ **After Deployment**:
+### **After Deployment**:
 - [ ] Website loads correctly
 - [ ] Admin panel accessible
 - [ ] Static files working
@@ -345,13 +360,13 @@ python manage.py migrate
 
 **PythonAnywhere deployment process**:
 
-1. 🔧 **Prepare** your Django project
-2. 📤 **Push** code to Git repository  
-3. 🌐 **Create** PythonAnywhere account
-4. 📥 **Clone** project on PythonAnywhere
-5. 🐍 **Setup** virtual environment
-6. ⚙️ **Configure** WSGI and static files
-7. 🔄 **Reload** web application
-8. 🎉 **Enjoy** your live Django app!
+1. **Prepare** your Django project
+2. **Push** code to Git repository  
+3. **Create** PythonAnywhere account
+4. **Clone** project on PythonAnywhere
+5. **Setup** virtual environment
+6. **Configure** WSGI and static files
+7. **Reload** web application
+8. **Enjoy** your live Django app!
 
-Your Django application is now accessible worldwide at `yourusername.pythonanywhere.com`! 🌍
+Your Django application is now accessible worldwide at `yourusername.pythonanywhere.com`!
