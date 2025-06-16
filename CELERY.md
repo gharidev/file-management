@@ -87,6 +87,17 @@ def cleanup_old_files():
 
 ---
 
+## Message Brokers
+
+### What is a Message Broker?
+
+**Message Broker** = Middleman that stores and delivers tasks
+- Like a **mailbox** between Django and Celery workers
+- Stores tasks until workers are ready to process them
+- Ensures tasks don't get lost
+
+---
+
 ## Quick Setup
 
 ### 1. Install & Configure
