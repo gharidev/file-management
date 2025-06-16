@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.5">
+  <diagram name="Static vs Media Files" id="tLDBjAUr47UI0gCJeq7T">
+    <mxGraphModel dx="1042" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Static Files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9EAD3;strokeColor=#6AA84F;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="80" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="e.g. CSS, JS, Fonts, Logos" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="80" y="90" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Served Directly (via CDN or Nginx)" style="shape=process;whiteSpace=wrap;html=1;fillColor=#EAD1DC;strokeColor=#A64D79;" parent="1" vertex="1">
+          <mxGeometry x="80" y="140" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="No Auth Required" style="text;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="100" y="200" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Media Files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CFE2F3;strokeColor=#3C78D8;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="400" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="e.g. User Uploads, Profile Pics" style="text;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="400" y="90" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Served via Application or Auth Proxy" style="shape=process;whiteSpace=wrap;html=1;fillColor=#F9CB9C;strokeColor=#E69138;" parent="1" vertex="1">
+          <mxGeometry x="400" y="140" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Access Control &amp; Permissions Required" style="text;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="410" y="200" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="10" style="shape=line;strokeColor=#999999;" parent="1" source="2" target="6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="✅ Fast Load" style="text;html=1;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="80" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="🔐 Requires Security Checks" style="text;html=1;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="400" y="240" width="180" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
